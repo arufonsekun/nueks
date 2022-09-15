@@ -1,7 +1,8 @@
 (ns nukes.core
   (:gen-class) 
   (:require [nukes.basic-operators :as basic-operators])
-  (:require [nukes.data-structures :as ds]))
+  (:require [nukes.data-structures :as ds])
+  (:require [nukes.functions :as func]))
 
 
 (defn -main
