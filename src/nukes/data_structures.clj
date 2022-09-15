@@ -51,6 +51,12 @@
   [epic-name]
   (conj epic-names epic-name))
 
+;; into function merges two seqs (list, vec, set, maps?)
+(defn merge-vector
+  "Merge a seq element into another seq"
+  [seq1]
+  (into [2 3 4 1] seq1))
+
 ; Lists
 
 (def simple-list '(2 0 1 4 3 8))
