@@ -1,16 +1,15 @@
-# nukes
+<p align=center>
+<img src="https://www.braveclojure.com/assets/images/layout/logo-web-teal-dark.png" width=60%/>
+</p>
 
-FIXME: description
+# Clojure studies
 
-## Installation
+This repository purpose is merely to host the code generate in my Clojure studies XD. The goal of this studies is to exercise a new coding paradigm: **functional programming**. As guidance I'm using the book [Clojure for de Brave and True](https://www.braveclojure.com/foreword/).
 
-Download from http://example.com/FIXME.
-
-## Usage
+## Repo structure
 
 FIXME: explanation
 
-    $ java -jar nukes-0.1.0-standalone.jar [args]
 
 ## Options
 
@@ -19,14 +18,6 @@ FIXME: listing of options this app accepts.
 ## Examples
 
 ...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
 
 ## License
 
