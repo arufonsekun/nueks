@@ -1,6 +1,8 @@
 (ns nukes.functions
   (:require [clojure.string :as string]))
 
+;; Higher-order functions: functions that take functions
+;; as parameter or return then.
 
 ;; Multiple arity function
 (defn multiple-arity-func
@@ -71,6 +73,7 @@
 
 ;; Returning function - clojures
 
+;; Anonymous function
 (defn inc-maker
   [inc-by]
   #(+ % inc-by))
@@ -156,3 +159,58 @@
           [] ;; reduce initial value
           hobbit-body-parts ;; reduce collection
           ))
+
+;; Naming anonymous functions
+(def my-special-multiplier (fn [x] (* x 3)))
+
+
+(defn hit
+  [asym-body-parts]
+  (let [
+    sym-parts (hobbit-symmetrizer asym-body-parts)
+    body-part-size-sum (reduce + (map :size sym-parts))
+    target (rand body-part-size-sum)
+  ]
+  (loop [
+      [part & remaining] sym-parts
+      accumulated-size (:size part)
+    ]
+    (if (> accumulated-size target)
+      (str "Target: " target "\nHitted body part was: " (:name part))
+    (recur remaining (+ accumulated-size (:size (first remaining))))))))
+
+
+;; Section 3 exercises
+
+;; 1. Use the str, vector, list, hash-map, and hash-set functions.
+(vector 1 2 3 4 5 6)
+(list 1 2 3 4 5 6)
+
+(def my-map (hash-map :a 1 :b 2 :c 3))
+
+
+(defn get-values
+  [my-map]
+  "Gets values from hash-map"
+  (keys my-map)
+  (let [map-keys (keys my-map)]
+    (loop [
+          [tail & remain] map-keys
+          values []]
+      (if (empty? remain)
+        (conj values (tail my-map))
+        (recur remain (conj values (tail my-map)))))))
+
+(hash-set 3 2 1 1 2 1)
+
+;; 2. Write a function that takes a number and adds 100 to it
+
+(defn adds-one-hundred
+  [num]
+  "Adds one hundred to given number"
+  (+ 100 num))
+
+(def dec9 (inc-maker -9))
+
+(defn mapset [func seq]
+  (set (map func seq)))

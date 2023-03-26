@@ -10,6 +10,23 @@ This repository purpose is merely to host the code generate in my Clojure studie
 
 FIXME: explanation
 
+## How to run
+
+```bash
+lein repl
+```
+
+```clojure
+(use 'nukes.core)
+```
+
+```clojure
+(basic-operators/the-do 11)
+```
+
+```clojure
+(use 'nukes.core :reload)
+```
 
 ## Options
 
