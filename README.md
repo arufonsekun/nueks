@@ -4,11 +4,7 @@
 
 # Clojure studies
 
-This repository purpose is merely to host the code generate in my Clojure studies XD. The goal of this studies is to exercise a new coding paradigm: **functional programming**. As guidance I'm using the book [Clojure for de Brave and True](https://www.braveclojure.com/foreword/).
-
-## Repo structure
-
-FIXME: explanation
+Clojure and functional programming studies.
 
 ## How to run
 
